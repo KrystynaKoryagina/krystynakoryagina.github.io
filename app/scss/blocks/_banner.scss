@@ -1,0 +1,98 @@
+.banner {
+
+	&__inner {
+		display: flex;
+		min-height: 653px;
+
+		@include media(tablets) {
+			flex-direction: column;
+		}
+	}
+
+	&__left {
+		display: flex;
+		align-items: center;
+		flex: 1;
+
+		@include media(tablets) {
+			margin-top: 32px;
+		}
+	}
+
+	&__content {
+		padding-right: 75px;
+	}
+
+	&__title {
+		max-width: 348px;
+		font-weight: bold;
+		font-size: 72px;
+		line-height: 1;
+
+		@include media(laptop) {
+			font-size: 60px;
+		}
+
+		@include media(phones) {
+			max-width: 175px;
+			font-size: 36px;
+		}
+	}
+
+	&__subtitle {
+		margin-top: 15px;
+		font-weight: 500;
+		font-size: 24px;
+
+		@include media(phones) {
+			margin-top: 10px;
+			font-size: 17px;
+		}
+	}
+
+	&__text {
+		margin-top: 40px;
+
+		@include media(phones) {
+			margin-top: 18px;
+			font-size: 14px;
+		}
+	}
+	
+	&__btn {
+		margin-top: 40px;
+
+		@include media(phones) {
+			margin-top: 24px;
+		}
+	}
+
+	&__right {
+		position: relative;
+		flex-basis: 836px;
+		overflow: hidden;
+
+		@include media(tablets) {
+			flex-basis: auto;
+			order: -1;
+			margin-left: -$containerPadding;
+			margin-right: -$containerPadding;
+		}
+	}
+
+	&__img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+		max-width: none;
+		transform: translateX(-50%);
+		
+		@include media(tablets) {
+			position: static;
+			top: 0;
+			left: 0;
+			max-width: 100%;
+			transform: none;
+		}
+	}
+}
