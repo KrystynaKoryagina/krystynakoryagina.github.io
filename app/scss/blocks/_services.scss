@@ -1,0 +1,38 @@
+.services {
+	$margin: 7px;
+
+	&__slider {
+		display: flex;
+		flex-wrap: wrap;
+		margin-top: 30px;
+		margin-left: -$margin;
+		margin-right: -$margin;  
+
+		@include media(tablets) {
+			margin-left: -$containerPadding;
+			margin-right: -$containerPadding;
+		}
+	}
+
+	&__item {
+		width: calc(100% / 3 - #{$margin} - #{$margin});
+		margin-left: $margin;
+		margin-right: $margin;  
+		margin-bottom: 15px;
+
+		@include media(tablets) {
+			width: auto;
+			height: auto;
+		}
+	}
+
+	.slick-slider {
+		.slick-list {
+			padding-left: $containerPadding;
+		}	
+
+		.slick-dots {
+			margin: auto;
+		}
+	}
+}

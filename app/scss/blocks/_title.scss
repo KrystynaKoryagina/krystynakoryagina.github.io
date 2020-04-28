@@ -1,0 +1,21 @@
+.title {
+	max-width: 668px;
+
+	&__name {
+		font-weight: bold;
+		font-size: 36px;
+
+		@include media(phones) {
+			font-size: 24px;
+		}
+	}
+
+	&__subtext {
+		margin-top: 24px;
+
+		@include media(phones) {
+			margin-top: 12px;
+			font-size: 13px;
+		}
+	}
+}

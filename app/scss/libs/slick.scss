@@ -43,7 +43,7 @@
     position: relative;
     left: 0;
     top: 0;
-    display: block;
+    display: flex;
     margin-left: auto;
     margin-right: auto;
 
@@ -97,4 +97,30 @@
 }
 .slick-arrow.slick-hidden {
     display: none;
+}
+
+.slick-dots {
+	display: flex;
+	justify-content: center;
+
+	li {
+		width: 6px;
+		height: 6px;
+		border: 1px solid rgba(0, 0, 0, 0.1);
+		border-radius: 50%;
+		cursor: pointer;
+
+		&.slick-active {
+			background-color: $pink;
+			border-color: $pink;
+		}
+
+		& + li {
+			margin-left: 4px;
+		}
+	}
+
+	button {
+		display: none;
+	}
 }

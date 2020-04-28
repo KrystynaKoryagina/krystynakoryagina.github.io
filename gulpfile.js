@@ -36,7 +36,7 @@ gulp.task('js', function() {
 
 // SASS
 gulp.task('scss', function () {
-	return gulp.src('app/scss/*.scss')
+	return gulp.src('app/scss/**/*.scss')
 		.pipe(sourcemaps.init())
 		.pipe(sassGlob())
 		.pipe(scss({outputStyle: 'expand'}).on('error', notify.onError()))
