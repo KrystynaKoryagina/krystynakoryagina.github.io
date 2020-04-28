@@ -1,0 +1,32 @@
+.btn {
+	font-family: $basicFontFamily;
+	font-size: $basicFontSize;
+	font-weight: 600;
+	line-height: 1;
+	border: 2px solid transparent;
+	border-radius: 3px;
+	transition: background-color .3s;
+	cursor: pointer;
+
+	&--small {
+		padding: 8px 36px;
+		color: $smallBtnBg;
+		border-color: $smallBtnBg;
+
+		&:hover {
+			background-color: $smallBtnBg;
+			color: #fff;
+		}
+	}
+
+	&--big {
+		padding: 13px 38px;
+		color: $bigBtnBg;
+		border-color: $bigBtnBg;
+
+		&:hover {
+			background-color: $bigBtnBg;
+			color: #fff;
+		}
+	}
+}

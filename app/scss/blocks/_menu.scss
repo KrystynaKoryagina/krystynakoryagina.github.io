@@ -1,0 +1,69 @@
+.menu {
+
+	&__title {
+		display: none;
+
+		@include media(tablets) {
+			display: block;
+			font-size: 36px;
+			font-weight: bold;
+		}
+	}
+
+	&__list {
+		display: flex;
+
+		@include media(tablets) {
+			display: block;
+			margin-top: 25px;
+		}
+	}
+
+	&__item {
+
+		& + .menu__item {
+			margin-left: 24px;
+
+			@include media(laptop) {
+				margin-left: 15px;
+			}
+
+			@include media(tablets) {
+				margin-left: 0;
+			}
+		}
+	}
+	
+	&__link {
+		font-family: Roboto,  sans-serif;
+		font-size: 14px;
+		
+		&::after {
+			content: "";
+			display: block;
+			width: 0;
+			height: 1px;
+			background: #060606;
+			transition: width .5s;
+		}
+		
+		&:hover::after {
+			width: 100%;
+		}
+
+		@include media(tablets) {
+			display: inline-block;
+			width: 100%;
+			padding: 15px 0;
+			font-family: Montserrat,  sans-serif;
+			font-weight: bold;
+			font-size: 24px;
+		}
+
+		@include media(phones) {
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+	}
+}
+

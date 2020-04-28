@@ -1,0 +1,76 @@
+.header {
+	position: sticky;
+	top: 0;
+	padding-top: 18px;
+	padding-bottom: 18px;
+	background-color: #fff;
+	z-index: 100;
+
+	&--shadow {
+		box-shadow: 0 4px 20px rgba(0,0,0, .4);
+	}
+
+	&__inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__menu {
+
+		@include media(tablets) {
+			position: fixed;
+			right: 0;
+			top: 0;
+			width: 100%;
+			max-height: 667px;
+			height: 0;
+			overflow: hidden;
+			transform: translateY(-100%);
+		}
+
+		&--active {
+
+			@include media(tablets) {
+				height: 100%;
+				transform: translateY(0);
+				transition: height .6s;
+			}
+		}
+
+		&--hide {
+
+			@include media(tablets) {
+				transition-property: transform, height;
+				transition-duration: .9s;
+			}
+		}
+	}
+
+	&__menu-content {
+		display: flex;
+		align-items: center;
+
+		@include media(tablets) {
+			display: block;
+			height: 100%;
+			padding: 40px 24px 20px;
+			background: #fff url(../images/mobile-menu.svg) no-repeat right top;
+			background-size: contain;
+			border-bottom: 4px solid $pink;
+		}		
+	}
+
+	&__btn {
+		margin-left: 35px;
+
+		@include media(laptop) {
+			margin-left: 20px;
+		}
+
+		@include media(tablets) {
+			margin-left: 0;
+			margin-top: 30px;	
+		}
+	}
+}
