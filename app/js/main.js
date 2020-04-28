@@ -26,6 +26,21 @@ $(function() {
 		}
 	});
 
+	// Scrollto
+	$('[data-scroll]').on('click', function(e) {
+		e.preventDefault();
+
+		var targetSection = $(this).data('scroll'),
+				distance = $(targetSection).offset().top;
+				
+		$('html,body').animate({
+			scrollTop: distance
+		}, 1000, 'swing');
+
+		$('.header__menu').removeClass('header__menu--active');
+		$('.menu-btn').removeClass('menu-btn--active');
+	});
+
 	// ArrowTop
 	$(window).on('scroll resize', function() {
 		var arrow = $('.arrow-up'),
