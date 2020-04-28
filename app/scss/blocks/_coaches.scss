@@ -1,0 +1,58 @@
+.coaches {
+
+	&__slider {
+		margin-top: 48px;
+
+		@include media(laptop) {
+			margin-left: -15px;
+			margin-right: -15px;
+		}
+	}
+
+	&__slider-item {
+		margin-right: 15px;
+	}
+
+	&__slider-counter {
+		display: flex;
+    align-items: center;
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+
+		@include media(tablets) {
+			display: none;
+		}
+	}
+
+	&__slider-num {
+		display: inline-block;
+		margin: 10px;
+	}
+
+	.slick-arrow {
+		margin: 5px;
+		font-size: 25px;
+		color: #000;
+		cursor: pointer;
+
+		&.slick-disabled {
+			opacity: .5;
+			cursor: none;
+		}
+	}
+
+	.slick-slider {
+		.slick-list {
+			box-shadow: 0 4px 30px rgba(207,207,207,.25);
+
+			@include media(laptop) {
+				padding-left: 15px;
+			}
+		}
+
+		.slick-dots {
+			margin-top: 16px;
+		}
+	}
+}

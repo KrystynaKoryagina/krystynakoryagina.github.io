@@ -47,4 +47,82 @@ $(function() {
 			}
 		});
 	});
+
+	// Coaches Slider
+	var sliderWrap = $('.coaches__slider');
+	var currentSliderBox = $('.coaches__slider-current');
+	var totalSliderBox = $('.coaches__slider-total');
+
+	sliderWrap.on('init afterChange', function(event, slick) {
+		setCounter(slick);
+	});
+
+	sliderWrap.slick({
+		infinite: false,
+		initialSlide: 0, 
+		slidesToShow: 2,
+		slidesToScroll: 2,
+		appendArrows: '.coaches__slider-counter',
+		prevArrow: '<a class="arrow-prev"><i class="icon icon-arrow-prev"</a>',
+		nextArrow: '<a class="arrow-next"><i class="icon icon-arrow-next"</a>',
+		responsive: [
+			{
+				breakpoint: 952,
+				settings: {
+					slidesToShow: 1.6,
+					slidesToScroll: 1
+				}
+			},
+			{
+				breakpoint: 769,
+				settings: {
+					slidesToShow: 2.4,
+					arrows: false,
+					dots: true
+				}
+			},
+			{
+				breakpoint: 620,
+				settings: {
+					slidesToShow: 2.2,
+					dots: true
+				}
+			},
+			{
+				breakpoint: 520,
+				settings: {
+					slidesToShow: 1.6,
+					slidesToScroll: 1,
+					dots: true
+				}
+			},
+			{
+				breakpoint:	400,
+				settings: {
+					slidesToShow: 1.3,
+					slidesToScroll: 1,
+					dots: true
+				}
+			}
+		]
+	});
+
+	function setCounter(slick) {
+		var slides = slick.slideCount,
+				slidesToShow = Math.floor(slick.options.slidesToShow),
+				slideToScroll = slick.options.slidesToScroll,
+				currentSlide =  (slick.currentSlide + slideToScroll) / slideToScroll;
+
+		var totalSlidesList;
+
+		if (slides > slidesToShow) {
+			totalSlidesList = Math.ceil((slides - slidesToShow) / slideToScroll + 1);
+			
+		} else {
+			totalSlidesList = currentSlide;
+		}
+
+		currentSliderBox.text(currentSlide);
+		totalSliderBox.text(totalSlidesList);
+	}
 });
