@@ -1,0 +1,14 @@
+// import libs
+@import "libs/reset";
+@import "libs/slick";
+
+// import 
+@import "variables";
+@import "mixins";
+
+@import "base";
+@import "icons";
+
+// import blocks
+@import "blocks/*.scss";
+

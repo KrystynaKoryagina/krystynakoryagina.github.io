@@ -1,0 +1,32 @@
+{
+  "name": "gulp-4",
+  "version": "1.0.0",
+  "description": "Simple Gulp Start Template",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "browserslist": [
+    "> .5%",
+    "last 2 versions"
+  ],
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "critical": "^1.3.9",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^4.0.1",
+    "gulp-iconfont": "^10.0.3",
+    "gulp-iconfont-css": "^3.0.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sass-glob": "^1.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-tinypng": "^1.0.2",
+    "gulp-uglify": "^3.0.2"
+  }
+}
