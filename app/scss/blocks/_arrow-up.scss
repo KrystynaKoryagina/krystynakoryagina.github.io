@@ -1,0 +1,16 @@
+.arrow-up {
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	opacity: 0;
+	cursor: pointer;
+	transition: opacity .3s;
+
+	&--active {
+		opacity: 1;
+	}
+
+	.icon-caret-up {
+		font-size: 60px;
+	}
+}

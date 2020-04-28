@@ -26,6 +26,19 @@ $(function() {
 		}
 	});
 
+	// ArrowTop
+	$(window).on('scroll resize', function() {
+		var arrow = $('.arrow-up'),
+				bannerH = $('.banner').outerHeight(),
+				wScroll = $(window).scrollTop();
+
+		if(wScroll > bannerH) {
+			arrow.addClass('arrow-up--active');
+		}	else {
+			arrow.removeClass('arrow-up--active');
+		}
+	});
+
 	// Services Slider
 	$(window).on('load resize orientationchange', function() {
 		$('.services__slider').each(function() {
