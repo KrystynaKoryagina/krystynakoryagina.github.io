@@ -1,4 +1,10 @@
 $(function() {
+	//init WOW.js
+	var wow = new WOW({
+		mobile: false
+	});
+	wow.init();
+
 	// Mobile Menu
 	$('.burger').on('click', function() {
 		var menu = $('.header__menu');
@@ -31,7 +37,8 @@ $(function() {
 		e.preventDefault();
 
 		var targetSection = $(this).data('scroll'),
-				distance = $(targetSection).offset().top;
+				headerH = $('.header').innerHeight(),
+				distance = $(targetSection).offset().top - headerH;
 				
 		$('html,body').animate({
 			scrollTop: distance
