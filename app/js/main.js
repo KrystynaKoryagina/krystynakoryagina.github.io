@@ -11,6 +11,7 @@ $(function() {
 		var menu = $('.header__menu');
 
 		$(this).toggleClass('burger--active');
+		$(document.body).toggleClass('no-scroll');
 
 		if (menu.hasClass('header__menu--active')) {
 			menu.removeClass('header__menu--active')
@@ -18,6 +19,7 @@ $(function() {
 		} else {
 			menu.removeClass('header__menu--hide')
 					.addClass('header__menu--active');
+
 		}
 	});
 
@@ -46,7 +48,7 @@ $(function() {
 		}, 1000, 'swing');
 
 		$('.header__menu').removeClass('header__menu--active');
-		$('.menu-btn').removeClass('menu-btn--active');
+		$('.burger').removeClass('burger--active');
 	});
 
 	// ArrowTop

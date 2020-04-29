@@ -37,19 +37,6 @@
 	&__link {
 		font-family: Roboto,  sans-serif;
 		font-size: 14px;
-		
-		&::after {
-			content: "";
-			display: block;
-			width: 0;
-			height: 1px;
-			background: #060606;
-			transition: width .5s;
-		}
-		
-		&:hover::after {
-			width: 100%;
-		}
 
 		@include media(tablets) {
 			display: inline-block;
@@ -64,6 +51,24 @@
 			padding-top: 10px;
 			padding-bottom: 10px;
 		}
+		
+		&::after {
+			content: "";
+			display: block;
+			width: 0;
+			height: 1px;
+			background: #060606;
+			transition: width .5s;
+
+			@include media(tablets) {
+				display: none;
+			}
+		}
+		
+		&:hover::after {
+			width: 100%;
+		}
+
 	}
 }
 
