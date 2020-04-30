@@ -1,11 +1,11 @@
-//init WOW.js
-var wow = new WOW({
-	mobile: false
-});
-wow.init();
-
 
 $(function() {
+	//init WOW.js
+	var wow = new WOW({
+		mobile: false
+	});
+	wow.init();
+
 	// Mobile Menu
 	$('.burger').on('click', function() {
 		var menu = $('.header__menu');
@@ -19,7 +19,6 @@ $(function() {
 		} else {
 			menu.removeClass('header__menu--hide')
 					.addClass('header__menu--active');
-
 		}
 	});
 
