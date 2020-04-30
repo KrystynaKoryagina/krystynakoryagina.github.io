@@ -13,6 +13,8 @@ $(function() {
 		$(this).toggleClass('burger--active');
 		$(document.body).toggleClass('no-scroll');
 
+		$('.menu').toggleClass('header__menu--active');
+
 		if (menu.hasClass('header__menu--active')) {
 			menu.removeClass('header__menu--active')
 					.addClass('header__menu--hide');
@@ -20,6 +22,10 @@ $(function() {
 			menu.removeClass('header__menu--hide')
 					.addClass('header__menu--active');
 		}
+
+		setTimeout(function() {
+			menu.removeClass('header__menu--hide');
+		}, 1001);
 	});
 
 	// Header

@@ -32,7 +32,9 @@
 		}
 	}
 
-	&__name {
+	&__text {
+		max-width: 187px;
+		margin: 0 auto;
 
 		@include media(phones) {
 			font-size: 13px;
