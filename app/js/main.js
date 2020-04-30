@@ -43,6 +43,8 @@ $(function() {
 	// Scrollto
 	$('[data-scroll]').on('click', function(e) {
 		e.preventDefault();
+		
+		$(document.body).removeClass('no-scroll');
 
 		var targetSection = $(this).data('scroll'),
 				headerH = $('.header').innerHeight(),
@@ -54,6 +56,7 @@ $(function() {
 
 		$('.header__menu').removeClass('header__menu--active');
 		$('.burger').removeClass('burger--active');
+
 	});
 
 	// ArrowTop
