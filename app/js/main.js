@@ -13,8 +13,6 @@ $(function() {
 		$(this).toggleClass('burger--active');
 		$(document.body).toggleClass('no-scroll');
 
-		$('.menu').toggleClass('header__menu--active');
-
 		if (menu.hasClass('header__menu--active')) {
 			menu.removeClass('header__menu--active')
 					.addClass('header__menu--hide');
